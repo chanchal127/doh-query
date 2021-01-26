@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# This script will move the doh-query script to the linux path (/usr/local/bin)
+if sudo cp doh-query /usr/local/bin;then
+       	if sudo chmod 755 /usr/local/bin/doh-query;then
+		echo -e "Initial setup is done..!!"
+		echo -e "Now you can use doh-query script to perform DoH queries from you terminal..!!"
+	else
+		echo -e "Executable permission error !!!"
+		echo -e "Use 755 permission to the file /use/local/bin/doh-query."
+	fi
+else
+	echo -e "Not able to copy doh-query script to the linux path..!!"
+	echo -e "Copy doh-query script to /usr/local/bin and provide executable (755) permission."
+fi
+
+
+	     
