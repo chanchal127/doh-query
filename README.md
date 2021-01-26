@@ -92,7 +92,7 @@ DoH query on IPv4 Server with the help of POST request with EDNS0 padding.
 
 Domain name is google.com and RR is A
 
-Find the DOH response for the GET query google.com:
+Find the DOH response for the POST query google.com:
 
 id 10962
 opcode QUERY
