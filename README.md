@@ -130,3 +130,26 @@ example.com. 60213 IN AAAA 2606:2800:220:1:248:1893:25c8:1946
 ;ADDITIONAL
 
 ```
+
+
+DoH query on IPv4 Server with a CA singned certificate.
+
+```
+$ doh-query example.com A --dns master.infoblox --cert /mnt/home/csutradhar/ca.pem --noverify --get
+
+Domain name is example.com and RR is A
+
+Find the DOH response for the GET query example.com:
+
+id 35666
+opcode QUERY
+rcode NOERROR
+flags QR RD RA
+;QUESTION
+example.com. IN A
+;ANSWER
+example.com. 60213 IN A 93.184.216.34
+;AUTHORITY
+;ADDITIONAL
+
+```
