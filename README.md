@@ -112,20 +112,20 @@ google.com. 184 IN A 93.184.216.34
 DoH query on IPv6 Server with the help of GET request without EDNS0 padding.
 
 ```
-$ doh-query example.com A --dns 2403:8600:80cf:e10c:4680::58 --noverify --get --ipv6
+$ doh-query example.com AAAA --dns 2403:8600:80cf:e10c:4680::58 --noverify --get --ipv6
 
-Domain name is example.com and RR is A
+Domain name is example.com and RR is AAAA
 
 Find the DOH response for the GET query example.com:
 
-id 15878
+id 35666
 opcode QUERY
 rcode NOERROR
 flags QR RD RA
 ;QUESTION
-example.com. IN A
+example.com. IN AAAA
 ;ANSWER
-example.com. 60676 IN A 93.184.216.34
+example.com. 60213 IN AAAA 2606:2800:220:1:248:1893:25c8:1946
 ;AUTHORITY
 ;ADDITIONAL
 
