@@ -28,7 +28,7 @@ Now you can use doh-query script to perform DoH queries from you terminal..!!
 
 ```
 
-> doh-query --help
+$ doh-query --help
 
 usage: doh-http2 [-h] [--time] [--dns DNS] [--cert CERT] [--post] [--get]
                  [--noverify] [--ipv6] [--edns]
@@ -61,7 +61,7 @@ DoH query on IPv4 Server with the help of GET request with EDNS0 padding.
 
 ```
 
-> doh-query google.com A --dns 10.196.105.244 --noverify --get --edns
+$ doh-query google.com A --dns 10.196.105.244 --noverify --get --edns
 
 Domain name is google.com and RR is A
 
@@ -88,7 +88,7 @@ DoH query on IPv4 Server with the help of POST request with EDNS0 padding.
 
 ```
 
-> doh-query example.com A --dns 10.196.105.244 --noverify --post --edns
+$ doh-query example.com A --dns 10.196.105.244 --noverify --post --edns
 
 Domain name is google.com and RR is A
 
@@ -105,6 +105,27 @@ option Generic 12
 google.com. IN A
 ;ANSWER
 google.com. 184 IN A 93.184.216.34
+;AUTHORITY
+;ADDITIONAL
+
+```
+DoH query on IPv6 Server with the help of GET request without EDNS0 padding.
+
+```
+$ doh-query example.com A --dns 2403:8600:80cf:e10c:4680::58 --noverify --get --ipv6
+
+Domain name is example.com and RR is A
+
+Find the DOH response for the GET query example.com:
+
+id 15878
+opcode QUERY
+rcode NOERROR
+flags QR RD RA
+;QUESTION
+example.com. IN A
+;ANSWER
+example.com. 60676 IN A 93.184.216.34
 ;AUTHORITY
 ;ADDITIONAL
 
